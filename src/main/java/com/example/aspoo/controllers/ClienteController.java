@@ -2,7 +2,6 @@ package com.example.aspoo.controllers;
 
 
 import com.example.aspoo.models.Cliente;
-import com.example.aspoo.repositories.ClienteRepository;
 import com.example.aspoo.services.ClienteService;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,19 +11,20 @@ import java.util.List;
 @RequestMapping("/cliente")
 public class ClienteController {
 
-    final ClienteRepository repository;
+    final
+    ClienteService clienteService;
 
-    public ClienteController(ClienteRepository repository) {
-        this.repository = repository;
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
     }
 
     @GetMapping
     List<Cliente> listaTodosClientes(){
-        return repository.findAll();
+        return clienteService.findAll();
     }
 
     @PostMapping
     Cliente criaCliente(@RequestBody Cliente cliente){
-        return repository.save(cliente);
+        return clienteService.criarCliente(cliente);
     }
 }
