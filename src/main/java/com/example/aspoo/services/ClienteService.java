@@ -1,5 +1,6 @@
 package com.example.aspoo.services;
 
+import com.example.aspoo.dtos.responses.ClienteResponse;
 import com.example.aspoo.models.Cliente;
 import com.example.aspoo.repositories.ClienteRepository;
 import org.springframework.stereotype.Service;
@@ -15,13 +16,15 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-    public List<Cliente> findAll(){
-        return clienteRepository.findAll();
+    public List<ClienteResponse> findAll(){
+        List <ClienteResponse> clientes = clienteRepository.findAll()
+                .stream()
+                .map(item -> ClienteResponse.converteParaClienteResponse(item))
+                .toList();
+        return clientes;
     }
 
     public Cliente criarCliente(Cliente cliente){
         return clienteRepository.save(cliente);
     }
-
-
 }

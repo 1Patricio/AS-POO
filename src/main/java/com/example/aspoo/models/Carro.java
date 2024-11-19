@@ -14,7 +14,6 @@ public class Carro {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String marca;
     private String modelo;
 }

@@ -1,6 +1,7 @@
 package com.example.aspoo.controllers;
 
 
+import com.example.aspoo.dtos.responses.ClienteResponse;
 import com.example.aspoo.models.Cliente;
 import com.example.aspoo.services.ClienteService;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class ClienteController {
     }
 
     @GetMapping
-    List<Cliente> listaTodosClientes(){
+    List<ClienteResponse> listaTodosClientes(){
         return clienteService.findAll();
     }
 
