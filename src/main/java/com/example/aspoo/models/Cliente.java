@@ -1,5 +1,6 @@
 package com.example.aspoo.models;
 
+import com.example.aspoo.dtos.request.ClienteRequest;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,5 +17,14 @@ public class Cliente {
     private Long id;
     private String password;
     private String nome;
-    private String idade;
+    private Integer idade;
+
+    public static Cliente ConverteParaCliente(ClienteRequest clienteRequest) {
+        Cliente cliente = new Cliente();
+        cliente.setNome(clienteRequest.getNome());
+        cliente.setIdade(clienteRequest.getIdade());
+        cliente.setPassword(clienteRequest.getPassword());
+
+        return cliente;
+    }
 }

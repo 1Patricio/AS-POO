@@ -7,13 +7,15 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ClienteResponse {
+    private String password;
     private String nome;
-    private String idade;
+    private Integer idade;
 
     public static ClienteResponse converteParaClienteResponse(Cliente cliente) {
         ClienteResponse clienteResponse = new ClienteResponse();
         clienteResponse.setNome(cliente.getNome());
         clienteResponse.setIdade(cliente.getIdade());
+        clienteResponse.setPassword(cliente.getPassword());
 
         return clienteResponse;
     }

@@ -1,5 +1,6 @@
 package com.example.aspoo.services;
 
+import com.example.aspoo.dtos.request.ClienteRequest;
 import com.example.aspoo.dtos.responses.ClienteResponse;
 import com.example.aspoo.models.Cliente;
 import com.example.aspoo.repositories.ClienteRepository;
@@ -24,7 +25,7 @@ public class ClienteService {
         return clientes;
     }
 
-    public Cliente criarCliente(Cliente cliente){
-        return clienteRepository.save(cliente);
+    public Cliente criarCliente(ClienteRequest clienteRequest){
+        return clienteRepository.save(Cliente.ConverteParaCliente(clienteRequest));
     }
 }

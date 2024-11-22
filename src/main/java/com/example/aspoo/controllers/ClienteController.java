@@ -1,6 +1,7 @@
 package com.example.aspoo.controllers;
 
 
+import com.example.aspoo.dtos.request.ClienteRequest;
 import com.example.aspoo.dtos.responses.ClienteResponse;
 import com.example.aspoo.models.Cliente;
 import com.example.aspoo.services.ClienteService;
@@ -25,7 +26,7 @@ public class ClienteController {
     }
 
     @PostMapping
-    Cliente criaCliente(@RequestBody Cliente cliente){
+    Cliente criaCliente(@RequestBody ClienteRequest cliente){
         return clienteService.criarCliente(cliente);
     }
 }
