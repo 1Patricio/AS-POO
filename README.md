@@ -33,7 +33,7 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 - Inicie seu banco de dado no console do [Docker](https://docs.docker.com/)
 
 1. Execute no terminal o comando abaixo para iniciar o banco
-   bash
+   ```
    docker run --name meu-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 
 2. Configure seu Data Base em **`/resources/application.properties `**
