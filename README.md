@@ -8,12 +8,12 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 - 
 ## :rocket: Tecnologias Utilizadas
 
-- *Linguagem principal:* Java
-- *Frameworks/Plataformas:* Spring Boot
-- *Gerenciamento de requisições:* Postman
-- *Data Base*: Postgres
-- *Visualização do Banco de dados:* pgAdmin
-- *Executar banco de dados:* Docker
+- **Linguagem principal:** Java
+- **Frameworks/Plataformas:** Spring Boot
+- **Gerenciamento de requisições:** Postman
+- **Data Base**: Postgres
+- **Visualização do Banco de dados:** pgAdmin
+- **Executar banco de dados:** Docker
 
 ## :tools: Configuração do Ambiente
 
@@ -28,7 +28,7 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 
 7. Configure o seu [Banco de Dados]((https://www.postgresql.org/docs/))
 
-## 📄 Configuração do Firebase
+## 📄 Configuração do Banco de Dados
 
 - Inicie seu banco de dado no console do [Docker](https://docs.docker.com/)
 
@@ -36,15 +36,16 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
    bash
    docker run --name meu-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 
-2. Instalar o flutterFire vai nos ajudar a configurar o firebase no projeto
-- :rotating_light: É necessário ter o Dart instalado na Variável de Ambiente do seu computador :rotating_light:
-   bash
-   dart pub global activate flutterfire_cli
+2. Configure seu Data Base em **`/resources/application.properties `**
+![WhatsApp Image 2024-12-04 at 20 33 50_1f8524ca](https://github.com/user-attachments/assets/41f4cedf-3007-4b82-b469-f73f08ef96bb)
 
-3. Dentro do diretório do projeto, execute
+2.1 Para primeira utilização use 
    bash
-   flutterfire configure
-- Durante a configuração, vai ser solicitado o packageName da aplicação, no android conseguimos pegar dentro da pasta app de android:
-  ![image](https://github.com/user-attachments/assets/6f062392-fa31-47e1-a035-a612de2a3971)
-  ![Copiar a String de que está após namespace = ](https://github.com/user-attachments/assets/8ee7bcfe-8100-491d-9168-9a03e70d0385)
+   spring.jpa.hibernate.ddl-auto=create
+2.2 Para as demais utilizações use
+   bash 
+   spring.jpa.hibernate.ddl-auto=update
 
+3. Configuração completa, agora voce pode usar a ferramenta de sua preferencia para visualizar o banco de dados e excecutar os comados DML
+
+   **Ferramenta utilizada no projeto:** [pgAdmin](https://www.pgadmin.org/download/)
