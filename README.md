@@ -5,7 +5,7 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 ## :clipboard: Funcionalidades
 
 - Criação, Edição, Remoção e Leitura.
-- 
+  
 ## :rocket: Tecnologias Utilizadas
 
 - **Linguagem principal:** Java
@@ -15,7 +15,7 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 - **Visualização do Banco de dados:** pgAdmin
 - **Executar banco de dados:** Docker
 
-## :tools: Configuração do Ambiente
+## 🛠 Configuração do Ambiente
 
 1. Certifique-se de ter o [Java](https://docs.oracle.com/en/java/) instalado.
 2. Certifique-se de ter uma IDE com as extensões do Java instaladas corretamente(Ex.: VS Code, Intellij).
@@ -23,7 +23,7 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 4. Certifique-se de ter o Docker instalado para iniciar um contêiner que executa o banco de dados.
    
 6. Clone este repositório:
-   bash
+   ```
    git clone https://github.com/1Patricio/AS-POO.git
 
 7. Configure o seu [Banco de Dados]((https://www.postgresql.org/docs/))
@@ -39,13 +39,27 @@ Este repositório contém o projeto de avaliação semestral da disciplina de *P
 2. Configure seu Data Base em **`/resources/application.properties `**
 ![WhatsApp Image 2024-12-04 at 20 33 50_1f8524ca](https://github.com/user-attachments/assets/41f4cedf-3007-4b82-b469-f73f08ef96bb)
 
-2.1 Para primeira utilização use 
-   bash
-   spring.jpa.hibernate.ddl-auto=create
-2.2 Para as demais utilizações use
-   bash 
-   spring.jpa.hibernate.ddl-auto=update
 
-3. Configuração completa, agora voce pode usar a ferramenta de sua preferencia para visualizar o banco de dados e excecutar os comados DML
+   2.1 Para primeira utilização use 
+   ```
+   spring.jpa.hibernate.ddl-auto=create
+   ```
+   2.2 Para as demais utilizações use
+   ``` 
+   spring.jpa.hibernate.ddl-auto=update
+   ```
+3. Configuração completa, agora voce pode usar a ferramenta de sua preferencia para visualizar o banco de dados e excecutar os comados **DML**
 
    **Ferramenta utilizada no projeto:** [pgAdmin](https://www.pgadmin.org/download/)
+
+## 👔 Créditos
+
+ Este projeto não seria possível sem a ajuda de:
+ 
+- [Anderson Patricio](https://github.com/1Patricio)- Documentação e desenvolvimento
+- [Lorenzo Frozza](https://github.com/lorenzofrozza)- Documentação e desenvolvimento
+- [Daniel Souza](https://www.linkedin.com/in/daniel-souza-729aa3183/)- Consultoria em estrutura e melhorias do projeto
+
+ Agradecimentos especiais para [Spring Boot](https://spring.io/projects/spring-boot) que facilitou o desenvolvimento.
+
+
